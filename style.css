@@ -1,0 +1,518 @@
+:root {
+  --lightRed: rgba(255,200,200,1);
+  --lightPink: rgba(255,245,245,1);
+  --lighterPink: rgba(255,250,250,1);
+  --lightCyan: rgba(200, 255, 254);
+  }
+
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black');
+
+mark {
+  background-color: cyan;
+  color: black;
+}
+
+body {
+	margin: 20vh 0 0;
+	transform: translateY(-0%);
+  background-color: #ffeeee;
+  background: linear-gradient(0deg, var(--lightPink) 0%, var(--lightRed) 100%, rgba(0,212,255,1) 100%);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.anaglyphBig{
+  box-sizing: content-box;
+  border: none;
+  font: normal 10vw/normal "Chau Philomene One", Impact, sans-serif;
+  color: #000000;
+  text-align: center;
+  text-overflow: clip;
+  letter-spacing: 24px;
+  text-shadow: 8px 0 4px rgb(30,242,241) , -8px 0 4px rgb(246,5,10) ;
+}
+
+.anaglyphBigReverse{
+  box-sizing: content-box;
+  border: none;
+  font: normal 10vw/normal "Chau Philomene One", Impact, sans-serif;
+  color: #000000;
+  text-align: center;
+  text-overflow: clip;
+  letter-spacing: 24px;
+  text-shadow: -3px 0 4px rgb(30,242,241) , 3px 0 4px rgb(246,5,10) ;
+}
+
+.anaglyphSmall{
+  box-sizing: content-box;
+  border: none;
+  font: normal 1.5vw/normal "Chau Philomene One", 'B612', sans-serif;
+  color: #000000;
+  margin-left: 100px;
+  margin-right: 100px;
+  text-align: center;
+  text-overflow: clip;
+  letter-spacing: 4px;
+  text-shadow: -1px 0 2px rgb(30,242,241) , 1px 0 2px rgb(246,5,10) ;
+}
+
+.anaglyphVerySmall{
+  box-sizing: content-box;
+  border: none;
+  font: normal 1.5vw/normal "Chau Philomene One", Impact, sans-serif;
+  color: #000000;
+  text-align: center;
+  text-overflow: clip;
+  letter-spacing: 2px;
+  text-shadow: 2px 0 2px rgb(30,242,241) , -2px 0 2px rgb(246,5,10) ;
+}
+
+.parallaxStructure {
+  /* The image used */
+  background-image: url("images/audaceColorCorrectedAnaglyph.jpg");
+
+  /* Set a specific height */
+  min-height: 400px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallaxCristal {
+  /* The image used */
+  background-image: url("images/cristal3D.jpg");
+
+  /* Set a specific height */
+  min-height: 400px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallaxDesign {
+  /* The image used */
+  background-image: url("images/GenerativeDesign.png");
+
+  /* Set a specific height */
+  min-height: 400px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallaxSoundArt {
+  /* The image used */
+  background-image: url("images/soundArt.png");
+
+  /* Set a specific height */
+  min-height: 400px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallaxEnvironnements {
+  /* The image used */
+  background-image: url("images/ImageProjet.jpg");
+
+  /* Set a specific height */
+  min-height: 400px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.glitch-wrapper {
+  height: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+.glitch {
+  color: white;
+  font-size: 150px;
+  font: normal 10vw/normal "Chau Philomene One", Impact, sans-serif;
+  color: #000000;
+  text-transform: upercase;
+  position: relative;
+  display: inline-block;
+    letter-spacing: 24px;
+  text-shadow: 4px 0 4px rgb(30,242,241) , -4px 0 4px rgb(246,5,10) ;
+  
+}
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 #49FC00;
+  clip: rect(24px, 550px, 90px, 0);
+  animation: glitch-anim-2 4.1s infinite linear alternate-reverse;
+}
+.glitch::after {
+  left: -2px;
+  text-shadow: -2px 0 #b300fc;
+  clip: rect(85px, 550px, 160px, 0);
+  animation: glitch-anim 2.5s infinite linear alternate-reverse;
+}
+@-webkit-keyframes glitch-anim {
+  0% {
+    clip: rect(52px, 9999px, 125px, 0);
+  }
+  4.166666666666666% {
+    clip: rect(108px, 9999px, 38px, 0);
+  }
+  8.333333333333332% {
+    clip: rect(57px, 9999px, 79px, 0);
+  }
+  12.5% {
+    clip: rect(75px, 9999px, 18px, 0);
+  }
+  16.666666666666664% {
+    clip: rect(95px, 9999px, 64px, 0);
+  }
+  20.833333333333336% {
+    clip: rect(31px, 9999px, 54px, 0);
+  }
+  25% {
+    clip: rect(76px, 9999px, 42px, 0);
+  }
+  29.166666666666668% {
+    clip: rect(90px, 9999px, 135px, 0);
+  }
+  33.33333333333333% {
+    clip: rect(56px, 9999px, 36px, 0);
+  }
+  37.5% {
+    clip: rect(135px, 9999px, 107px, 0);
+  }
+  41.66666666666667% {
+    clip: rect(70px, 9999px, 66px, 0);
+  }
+  45.83333333333333% {
+    clip: rect(44px, 9999px, 0px, 0);
+  }
+  50% {
+    clip: rect(133px, 9999px, 41px, 0);
+  }
+  54.166666666666664% {
+    clip: rect(120px, 9999px, 100px, 0);
+  }
+  58.333333333333336% {
+    clip: rect(9px, 9999px, 104px, 0);
+  }
+  62.5% {
+    clip: rect(65px, 9999px, 164px, 0);
+  }
+  66.66666666666666% {
+    clip: rect(60px, 9999px, 12px, 0);
+  }
+  70.83333333333334% {
+    clip: rect(123px, 9999px, 23px, 0);
+  }
+  75% {
+    clip: rect(85px, 9999px, 81px, 0);
+  }
+  79.16666666666666% {
+    clip: rect(139px, 9999px, 30px, 0);
+  }
+  83.33333333333334% {
+    clip: rect(79px, 9999px, 143px, 0);
+  }
+  87.5% {
+    clip: rect(103px, 9999px, 121px, 0);
+  }
+  91.66666666666666% {
+    clip: rect(16px, 9999px, 117px, 0);
+  }
+  95.83333333333334% {
+    clip: rect(15px, 9999px, 57px, 0);
+  }
+  100% {
+    clip: rect(92px, 9999px, 113px, 0);
+  }
+}
+@keyframes glitch-anim {
+  0% {
+    clip: rect(52px, 9999px, 125px, 0);
+  }
+  4.166666666666666% {
+    clip: rect(108px, 9999px, 38px, 0);
+  }
+  8.333333333333332% {
+    clip: rect(57px, 9999px, 79px, 0);
+  }
+  12.5% {
+    clip: rect(75px, 9999px, 18px, 0);
+  }
+  16.666666666666664% {
+    clip: rect(95px, 9999px, 64px, 0);
+  }
+  20.833333333333336% {
+    clip: rect(31px, 9999px, 54px, 0);
+  }
+  25% {
+    clip: rect(76px, 9999px, 42px, 0);
+  }
+  29.166666666666668% {
+    clip: rect(90px, 9999px, 135px, 0);
+  }
+  33.33333333333333% {
+    clip: rect(56px, 9999px, 36px, 0);
+  }
+  37.5% {
+    clip: rect(135px, 9999px, 107px, 0);
+  }
+  41.66666666666667% {
+    clip: rect(70px, 9999px, 66px, 0);
+  }
+  45.83333333333333% {
+    clip: rect(44px, 9999px, 0px, 0);
+  }
+  50% {
+    clip: rect(133px, 9999px, 41px, 0);
+  }
+  54.166666666666664% {
+    clip: rect(120px, 9999px, 100px, 0);
+  }
+  58.333333333333336% {
+    clip: rect(9px, 9999px, 154px, 0);
+  }
+  62.5% {
+    clip: rect(65px, 9999px, 144px, 0);
+  }
+  66.66666666666666% {
+    clip: rect(60px, 9999px, 12px, 0);
+  }
+  70.83333333333334% {
+    clip: rect(123px, 9999px, 23px, 0);
+  }
+  75% {
+    clip: rect(85px, 9999px, 81px, 0);
+  }
+  79.16666666666666% {
+    clip: rect(139px, 9999px, 30px, 0);
+  }
+  83.33333333333334% {
+    clip: rect(79px, 9999px, 143px, 0);
+  }
+  87.5% {
+    clip: rect(103px, 9999px, 121px, 0);
+  }
+  91.66666666666666% {
+    clip: rect(16px, 9999px, 117px, 0);
+  }
+  95.83333333333334% {
+    clip: rect(15px, 9999px, 57px, 0);
+  }
+  100% {
+    clip: rect(92px, 9999px, 113px, 0);
+  }
+}
+@-webkit-keyframes glitch-anim-2 {
+  6.666666666666667% {
+    clip: rect(24px, 9999px, 23px, 0);
+  }
+  10% {
+    clip: rect(84px, 9999px, 33px, 0);
+  }
+  13.333333333333334% {
+    clip: rect(140px, 9999px, 51px, 0);
+  }
+  16.666666666666664% {
+    clip: rect(83px, 9999px, 44px, 0);
+  }
+  20% {
+    clip: rect(15px, 9999px, 159px, 0);
+  }
+  23.333333333333332% {
+    clip: rect(34px, 9999px, 26px, 0);
+  }
+  26.666666666666668% {
+    clip: rect(1px, 9999px, 129px, 0);
+  }
+  30% {
+    clip: rect(74px, 9999px, 12px, 0);
+  }
+  33.33333333333333% {
+    clip: rect(104px, 9999px, 48px, 0);
+  }
+  36.666666666666664% {
+    clip: rect(5px, 9999px, 128px, 0);
+  }
+  40% {
+    clip: rect(60px, 9999px, 103px, 0);
+  }
+  43.333333333333336% {
+    clip: rect(131px, 9999px, 132px, 0);
+  }
+  46.666666666666664% {
+    clip: rect(21px, 9999px, 8px, 0);
+  }
+  50% {
+    clip: rect(116px, 9999px, 31px, 0);
+  }
+  53.333333333333336% {
+    clip: rect(36px, 9999px, 31px, 0);
+  }
+  56.666666666666664% {
+    clip: rect(18px, 9999px, 112px, 0);
+  }
+  60% {
+    clip: rect(117px, 9999px, 45px, 0);
+  }
+  63.33333333333333% {
+    clip: rect(4px, 9999px, 64px, 0);
+  }
+  66.66666666666666% {
+    clip: rect(74px, 9999px, 162px, 0);
+  }
+  70% {
+    clip: rect(102px, 9999px, 16px, 0);
+  }
+  73.33333333333333% {
+    clip: rect(40px, 9999px, 119px, 0);
+  }
+  76.66666666666667% {
+    clip: rect(100px, 9999px, 132px, 0);
+  }
+  80% {
+    clip: rect(123px, 9999px, 127px, 0);
+  }
+  83.33333333333334% {
+    clip: rect(114px, 9999px, 48px, 0);
+  }
+  86.66666666666667% {
+    clip: rect(85px, 9999px, 65px, 0);
+  }
+  90% {
+    clip: rect(12px, 9999px, 123px, 0);
+  }
+  93.33333333333333% {
+    clip: rect(52px, 9999px, 21px, 0);
+  }
+  96.66666666666667% {
+    clip: rect(65px, 9999px, 139px, 0);
+  }
+  100% {
+    clip: rect(80px, 9999px, 140px, 0);
+  }
+}
+@keyframes glitch-anim-2 {
+  6.666666666666667% {
+    clip: rect(24px, 9999px, 23px, 0);
+  }
+  10% {
+    clip: rect(84px, 9999px, 33px, 0);
+  }
+  13.333333333333334% {
+    clip: rect(140px, 9999px, 51px, 0);
+  }
+  16.666666666666664% {
+    clip: rect(83px, 9999px, 44px, 0);
+  }
+  20% {
+    clip: rect(15px, 9999px, 129px, 0);
+  }
+  23.333333333333332% {
+    clip: rect(34px, 9999px, 26px, 0);
+  }
+  26.666666666666668% {
+    clip: rect(1px, 9999px, 159px, 0);
+  }
+  30% {
+    clip: rect(74px, 9999px, 12px, 0);
+  }
+  33.33333333333333% {
+    clip: rect(104px, 9999px, 48px, 0);
+  }
+  36.666666666666664% {
+    clip: rect(5px, 9999px, 128px, 0);
+  }
+  40% {
+    clip: rect(60px, 9999px, 143px, 0);
+  }
+  43.333333333333336% {
+    clip: rect(131px, 9999px, 132px, 0);
+  }
+  46.666666666666664% {
+    clip: rect(21px, 9999px, 8px, 0);
+  }
+  50% {
+    clip: rect(116px, 9999px, 31px, 0);
+  }
+  53.333333333333336% {
+    clip: rect(36px, 9999px, 31px, 0);
+  }
+  56.666666666666664% {
+    clip: rect(18px, 9999px, 152px, 0);
+  }
+  60% {
+    clip: rect(117px, 9999px, 45px, 0);
+  }
+  63.33333333333333% {
+    clip: rect(4px, 9999px, 64px, 0);
+  }
+  66.66666666666666% {
+    clip: rect(74px, 9999px, 112px, 0);
+  }
+  70% {
+    clip: rect(102px, 9999px, 16px, 0);
+  }
+  73.33333333333333% {
+    clip: rect(40px, 9999px, 119px, 0);
+  }
+  76.66666666666667% {
+    clip: rect(100px, 9999px, 132px, 0);
+  }
+  80% {
+    clip: rect(123px, 9999px, 127px, 0);
+  }
+  83.33333333333334% {
+    clip: rect(114px, 9999px, 48px, 0);
+  }
+  86.66666666666667% {
+    clip: rect(85px, 9999px, 65px, 0);
+  }
+  90% {
+    clip: rect(12px, 9999px, 163px, 0);
+  }
+  93.33333333333333% {
+    clip: rect(52px, 9999px, 21px, 0);
+  }
+  96.66666666666667% {
+    clip: rect(65px, 9999px, 139px, 0);
+  }
+  100% {
+    clip: rect(80px, 9999px, 140px, 0);
+  }
+}
+
+
