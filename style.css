@@ -167,7 +167,7 @@ img {
 
 .parallaxForest {
   /* The image used */
-  background-image: url("images/ModularNeck.jpg");
+  background-image: url("images/ModularNeck.png");
 
   /* Set a specific height */
   min-height: 400px; 
